@@ -42,3 +42,8 @@ footer {
   background: #f4f4f4;
   margin-top: 20px;
 }
+
+.module-title {
+  font-weight: bold;
+  color: #0077cc;
+}
