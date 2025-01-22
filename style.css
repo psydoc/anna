@@ -47,3 +47,71 @@ footer {
   font-weight: bold;
   color: #0077cc;
 }
+
+/* Общие стили для секции */
+#modules {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+#modules h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0077cc;
+  margin-bottom: 30px;
+}
+
+/* Контейнер для карточек */
+.modules-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Стили для каждой карточки */
+.module-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.module-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.module-card ul li {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Эффект при наведении */
+.module-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .modules-container {
+    grid-template-columns: 1fr;
+  }
+
+  .module-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .module-card ul li {
+    font-size: 0.9rem;
+  }
+}
