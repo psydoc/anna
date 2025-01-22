@@ -1,47 +1,97 @@
-/* Общие стили для секции */
+/* Основные стили */
+body {
+  font-family: 'Roboto', sans-serif; /* Используем более современный шрифт */
+  background-color: #f4f7fc; /* Светлый фон для всего сайта */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Шапка сайта */
+header.hero {
+  background: linear-gradient(45deg, #0077cc, #00bcd4); /* Градиентный фон */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+header.hero .cta-button {
+  background-color: #ff8800;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+header.hero .cta-button:hover {
+  background-color: #f45d02;
+}
+
+/* Секция с модулями */
 #modules {
   padding: 50px 20px;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 #modules h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #0077cc;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
 /* Контейнер для карточек */
 .modules-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Разделяем на 3 колонки */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 0 20px;
-  grid-auto-rows: minmax(200px, auto); /* Ограничиваем минимальную высоту карточек */
 }
 
 /* Стили для каждой карточки */
 .module-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  border-left: 5px solid #0077cc; /* Левый бордер для акцента */
+  position: relative;
 }
 
 .module-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: #333;
   margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Стили для списков в карточках */
+.module-card ul {
+  padding-left: 20px;
 }
 
 .module-card ul li {
   margin: 8px 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.6;
+}
+
+/* Заголовки списков */
+.module-card li strong {
+  color: #0077cc;
 }
 
 /* Эффект при наведении */
@@ -53,14 +103,14 @@
 /* Мобильная адаптация */
 @media (max-width: 768px) {
   .modules-container {
-    grid-template-columns: 1fr; /* Все карточки в один столбец */
+    grid-template-columns: 1fr;
   }
 
   .module-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .module-card ul li {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
