@@ -33,4 +33,176 @@ header.hero .cta-button {
 
 header.hero .cta-button:hover {
   background-color: #f45d02;
- 
+  transform: scale(1.05);
+}
+
+/* Секция с модулями */
+#modules {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+#modules h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #0077cc;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Контейнер для карточек */
+.modules-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 20px;
+  grid-auto-rows: minmax(250px, auto);
+}
+
+/* Стили для каждой карточки */
+.module-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-left: 5px solid #0077cc;
+  position: relative;
+}
+
+.module-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.module-card li strong {
+  color: #0077cc;
+}
+
+.module-card ul {
+  padding-left: 20px;
+}
+
+.module-card ul li {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Эффект при наведении */
+.module-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Увеличиваем эффект тени */
+}
+
+/* Раскраска карточек */
+.module-card:nth-child(1) {
+  background-color: #e3f2fd;
+}
+
+.module-card:nth-child(2) {
+  background-color: #fff8e1;
+}
+
+.module-card:nth-child(3) {
+  background-color: #e8f5e9;
+}
+
+.module-card:nth-child(4) {
+  background-color: #fce4ec;
+}
+
+.module-card:nth-child(5) {
+  background-color: #fff3e0;
+}
+
+.module-card:nth-child(6) {
+  background-color: #f1f8e9;
+}
+
+.module-card:nth-child(7) {
+  background-color: #f3e5f5;
+}
+
+.module-card:nth-child(8) {
+  background-color: #e1f5fe;
+}
+
+.module-card:nth-child(9) {
+  background-color: #f1f8e9;
+}
+
+/* Секция "О курсе" */
+#about-course {
+  background-color: #0077cc;
+  color: white;
+  padding: 50px 20px;
+  margin: 40px 0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+#about-course h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#about-course p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #f4f7fc;
+}
+
+#about-course .cta-button {
+  background-color: #ff8800;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#about-course .cta-button:hover {
+  background-color: #f45d02;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .modules-container {
+    grid-template-columns: 1fr;
+  }
+
+  .module-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .module-card ul li {
+    font-size: 1rem;
+  }
+
+  header.hero h1 {
+    font-size: 2.5rem;
+  }
+
+  header.hero .cta-button {
+    font-size: 1.3rem;
+    padding: 15px 25px;
+  }
+
+  #about-course h2 {
+    font-size: 2rem;
+  }
+
+  #about-course p {
+    font-size: 1rem;
+  }
+}
