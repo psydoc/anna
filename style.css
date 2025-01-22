@@ -52,9 +52,10 @@ header.hero .cta-button:hover {
 /* Контейнер для карточек */
 .modules-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
   gap: 20px;
   padding: 0 20px;
+  grid-auto-rows: minmax(250px, auto); /* Ограничиваем минимальную высоту карточек */
 }
 
 /* Стили для каждой карточки */
@@ -77,6 +78,11 @@ header.hero .cta-button:hover {
   font-weight: 600;
 }
 
+/* Заголовки списков */
+.module-card li strong {
+  color: #0077cc;
+}
+
 /* Стили для списков в карточках */
 .module-card ul {
   padding-left: 20px;
@@ -89,21 +95,53 @@ header.hero .cta-button:hover {
   line-height: 1.6;
 }
 
-/* Заголовки списков */
-.module-card li strong {
-  color: #0077cc;
-}
-
 /* Эффект при наведении */
 .module-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Раскраска карточек */
+.module-card:nth-child(1) {
+  background-color: #e3f2fd; /* Светло-голубой */
+}
+
+.module-card:nth-child(2) {
+  background-color: #fff8e1; /* Светло-желтый */
+}
+
+.module-card:nth-child(3) {
+  background-color: #e8f5e9; /* Светло-зеленый */
+}
+
+.module-card:nth-child(4) {
+  background-color: #fce4ec; /* Светло-розовый */
+}
+
+.module-card:nth-child(5) {
+  background-color: #fff3e0; /* Персиковый */
+}
+
+.module-card:nth-child(6) {
+  background-color: #f1f8e9; /* Светло-зеленовато-желтый */
+}
+
+.module-card:nth-child(7) {
+  background-color: #f3e5f5; /* Светло-фиолетовый */
+}
+
+.module-card:nth-child(8) {
+  background-color: #e1f5fe; /* Светло-голубой */
+}
+
+.module-card:nth-child(9) {
+  background-color: #f1f8e9; /* Светло-зеленый */
+}
+
 /* Мобильная адаптация */
 @media (max-width: 768px) {
   .modules-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Все карточки в одну колонку */
   }
 
   .module-card h3 {
