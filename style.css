@@ -14,9 +14,10 @@
 /* Контейнер для карточек */
 .modules-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Разделяем на 3 колонки */
   gap: 20px;
   padding: 0 20px;
+  grid-auto-rows: minmax(200px, auto); /* Ограничиваем минимальную высоту карточек */
 }
 
 /* Стили для каждой карточки */
@@ -26,6 +27,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .module-card h3 {
@@ -34,15 +37,11 @@
   margin-bottom: 15px;
 }
 
-.module-card ul {
-  list-style: none;
-  padding-left: 0;
-}
-
 .module-card ul li {
   margin: 8px 0;
   font-size: 1rem;
   color: #555;
+  line-height: 1.4;
 }
 
 /* Эффект при наведении */
@@ -54,7 +53,7 @@
 /* Мобильная адаптация */
 @media (max-width: 768px) {
   .modules-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Все карточки в один столбец */
   }
 
   .module-card h3 {
