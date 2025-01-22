@@ -1,7 +1,7 @@
 /* Основные стили */
 body {
-  font-family: 'Roboto', sans-serif; /* Используем более современный шрифт */
-  background-color: #f4f7fc; /* Светлый фон для всего сайта */
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc;
   margin: 0;
   padding: 0;
   color: #333;
@@ -9,35 +9,36 @@ body {
 
 /* Шапка сайта */
 header.hero {
-  background: linear-gradient(45deg, #0077cc, #00bcd4); /* Градиентный фон */
+  background: linear-gradient(45deg, #0077cc, #00bcd4);
   color: #fff;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px; /* Увеличим отступы для улучшения восприятия */
 }
 
 header.hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem; /* Увеличим размер заголовка */
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Увеличим отступ между заголовком и кнопкой */
 }
 
 header.hero .cta-button {
   background-color: #ff8800;
   color: white;
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 20px 40px; /* Увеличим отступы для кнопки */
+  font-size: 1.5rem; /* Увеличим размер шрифта на кнопке */
   border-radius: 50px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Добавим анимацию нажатия */
 }
 
 header.hero .cta-button:hover {
   background-color: #f45d02;
+  transform: scale(1.05); /* Увеличим кнопку при наведении */
 }
 
 /* Секция с модулями */
 #modules {
-  padding: 50px 20px;
+  padding: 60px 20px; /* Увеличим отступы для улучшения восприятия */
   background-color: #ffffff;
 }
 
@@ -52,10 +53,10 @@ header.hero .cta-button:hover {
 /* Контейнер для карточек */
 .modules-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 0 20px;
-  grid-auto-rows: minmax(250px, auto); /* Ограничиваем минимальную высоту карточек */
+  grid-auto-rows: minmax(250px, auto);
 }
 
 /* Стили для каждой карточки */
@@ -64,91 +65,4 @@ header.hero .cta-button:hover {
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   padding: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  border-left: 5px solid #0077cc; /* Левый бордер для акцента */
-  position: relative;
-}
-
-.module-card h3 {
-  font-size: 1.75rem;
-  color: #333;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-/* Заголовки списков */
-.module-card li strong {
-  color: #0077cc;
-}
-
-/* Стили для списков в карточках */
-.module-card ul {
-  padding-left: 20px;
-}
-
-.module-card ul li {
-  margin: 8px 0;
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Эффект при наведении */
-.module-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Раскраска карточек */
-.module-card:nth-child(1) {
-  background-color: #e3f2fd; /* Светло-голубой */
-}
-
-.module-card:nth-child(2) {
-  background-color: #fff8e1; /* Светло-желтый */
-}
-
-.module-card:nth-child(3) {
-  background-color: #e8f5e9; /* Светло-зеленый */
-}
-
-.module-card:nth-child(4) {
-  background-color: #fce4ec; /* Светло-розовый */
-}
-
-.module-card:nth-child(5) {
-  background-color: #fff3e0; /* Персиковый */
-}
-
-.module-card:nth-child(6) {
-  background-color: #f1f8e9; /* Светло-зеленовато-желтый */
-}
-
-.module-card:nth-child(7) {
-  background-color: #f3e5f5; /* Светло-фиолетовый */
-}
-
-.module-card:nth-child(8) {
-  background-color: #e1f5fe; /* Светло-голубой */
-}
-
-.module-card:nth-child(9) {
-  background-color: #f1f8e9; /* Светло-зеленый */
-}
-
-/* Мобильная адаптация */
-@media (max-width: 768px) {
-  .modules-container {
-    grid-template-columns: 1fr; /* Все карточки в одну колонку */
-  }
-
-  .module-card h3 {
-    font-size: 1.4rem;
-  }
-
-  .module-card ul li {
-    font-size: 1rem;
-  }
-}
+  transition: transform 0.3s ease, box-shad
